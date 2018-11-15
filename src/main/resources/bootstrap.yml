@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: oauth
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/auth3?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 1qaz2wsx
+server:
+  port: ${port:5566}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    enabled: true
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+logging:
+  file: /logs/auth-dev.log
+  level:
+    org.springframework: info
+    com.example.demo: debug
+
+security:
+  oauth2:
+    authorization:
+      jwt:
+        key-value: '我難過的是放棄你放棄愛放棄的夢被打碎忍住悲哀'
