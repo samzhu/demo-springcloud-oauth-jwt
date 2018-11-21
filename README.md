@@ -6,6 +6,7 @@
 ```
 curl -X POST \
   http://localhost:5566/oauth/token \
+  -H 'Authorization: Basic YXBwOjEyMzQ1Ng==' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'username=admin&password=123456&grant_type=password'
 ```
@@ -14,6 +15,7 @@ curl -X POST \
 ```
 curl -X POST \
   http://localhost:5566/oauth/token \
+  -H 'Authorization: Basic YXBwOjEyMzQ1Ng==' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'grant_type=refresh_token&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX_SO8tnl15XkRrW6zHgBWQZUUUpW-qWOmwIk'
 ```
